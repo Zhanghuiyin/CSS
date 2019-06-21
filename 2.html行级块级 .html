@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>hello </div>
+    <div>world</div>
+    <!-- 文本标签，块级，不在一行输出 -->
+    <span>hello</span>
+    <span>world</span>
+    <!-- 文本标签，行级，在一行输出-->
+</body>
+</html>
+
+
+1.行级元素靠内容抻开，那么如果想让行级元素有高度和宽度：
+第一种办法：里面设置内容，行级元素靠内容抻开；
+第二种：display：block转换；
+第三种：加padding； 
+
+2.行级元素和块级元素的差别
+ 1）行级元素成行排列，块级元素成列排列 
+ 2）行级元素调外边距只可以margin-left ,margin-right;
+    块级元素调外边距可以 left ,right,bottom,top 都可以。
+ 3）行级元素不可以嵌套块级元素，但块级元素可以包含行内元素和块级元素
+ （后两个是在css里面的差别，面试常考哦！！！）
+
+行级元素不要嵌套块级元素
+   <span>
+    <div>hello</div>
+ </span> 
+ 
+p标签不要嵌套div 
+  <p>
+    <div>hello</div>
+  </p>
+  <p>world</p>
+
+3.常见的行级，块级，行块级元素：
+常见的块级元素：
+ <div></div>
+ <p></p>
+ <ul></ul>
+ <li></li>
+常见的行级元素:
+<span></span>
+<a href=""></a>     
+<i></i> 图标
+
+常见的行块级元素：
+      <input type="text">  文本框
+      <img src="" alt="">   插入图片
+      
+
+

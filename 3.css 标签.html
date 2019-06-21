@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+            /* 浏览器自带外边距，来body里设置一下 */
+         /* 标签选择器 */
+        li{
+            list-style:none;
+             /* 控制列表样式 ，去掉前面小圆点*/
+            color: red;
+            /* rgb ，rgba ，英文单词 ，＃16进至 这四种表示颜色*/
+        }
+        /* 标签选择器，控制下面所有到li */
+          .ul1{
+            margin:0;
+            /* 外边距 */
+            padding: 0;
+            /* 内边距 */
+            border: 1px solid black;
+            /* 外边框：边框大小，实线，边框颜色 ,solid代表实线 */
+         /* 类选择器，class 类前面加.    */
+             
+        }
+          .ul1 .li1{
+            font-size: 50px;
+            /* 字体大小 */
+    }
+    /* 类选择器，class用.  */
+     /* .uli .li1 的 uli后面写空格 */
+          #li2{
+            font-size: 70px;
+            /* 类选择器，ID用＃ */
+    }
+    </style>
+    <!-- css 写在 head里标签 是style -->
+
+</head>
+<body>
+        <ul class="ul1">
+                <li class="li1">1</li>
+                <li id="li2">2</li>
+                <li>3</li>
+        </ul>
+        <ul>
+                <li class="li1">a</li>
+                <li>b</li>
+                <li>c</li>
+         </ul>
+                   
+
+</body>
+</html>
+border-radius: 50%;   圆角标签 50%就代表是圆形 
+transform: rotate(45deg); /*旋转45度*/
+list-style: none; 列表样式 去掉列表前面自带的小圆点  
+text-decoration: none; 去掉a标签自带的下划线
+outline:none;文本框自带蓝色点击边框，这个是去掉的的意思；
+border: 1px solid #000;
