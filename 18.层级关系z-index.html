@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .parent{
+      position: relative;
+    }
+    .div1, .div2{
+      height: 100px;
+      width: 100px;
+      background-color: red;
+    }
+    .div2{
+      background-color: blue;
+    }
+    .div1,.div2{
+      position: absolute;
+      top:0;
+      left: 0;
+    }
+  
+    .div1{
+      z-index: 10
+      /* 仅在定位后元素可用 */
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+      <div class="div1"></div>
+      <div class="div2"></div>
+  </div>
+ 
+</body>
+</html>
+<!-- 
+实现层级关系的两种方式：
+z-index：100px;  只有在定位之后才能用
+transform:translateZ(100px);  在z轴方向100px，但是要在父级设置3d效果  transform-style: preserve-3d -->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 1000px;
+
+        }
+        .parent{
+            width: 200px;
+            height: 200px;
+            border: 2px dashed black;  /*solid实线 dashed虚线*/
+            position: relative;
+         
+        }
+        .div1{
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            background: red;
+            transition: all 1s ease;
+            position: absolute;
+            top:0;
+            left:0;
+                    
+        }     
+        .div2{
+            width: 200px;
+            height: 200px;
+            background:blue;
+            transition: all 1s ease;
+            position: absolute;
+            top:0;
+            left:0;
+            transform: rotateY(180deg) translateZ(1px);   
+            /* rotateY(180deg)里面的意思是它沿着自己的y轴旋转180度  */
+            /* 不能分开写两个transform，系统不知道改执行哪个 */
+         }
+         .div1:hover{
+             transform: rotateY(180deg)  translateZ(1px) ; 
+         }
+       
+    
+    </style>
+</head>
+<body>
+    <div class="parent">
+            
+            <div class="div1">唯创
+                    <div class="div2">小伙伴</div>
+            </div>
+    </div>
+    
+
+    
+</body>
+</html>

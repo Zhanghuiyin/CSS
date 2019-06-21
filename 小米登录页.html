@@ -1,0 +1,314 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <style>
+         *{
+             margin:  0;
+             padding: 0;
+         }
+         /* header start  */
+         .header-panel{
+             height: 98px;
+             width: 1130px;
+             margin: 0 auto;
+         }
+         .header-img{
+             height: 98px;
+             width: 200px;
+             background-image: url("https://account.xiaomi.com/static/res/7f6f2f5/account-static/respassport/acc-2014/img/mistore_logo.png")
+         }
+         /* header end  */
+
+         /* content start  */
+         .content{
+             position: relative;
+         }
+         .content-bg{
+             height: 588px;
+             background-image: url("https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f838fdcd77715410b441f2f56d8f10cd.jpg");
+             background-position:center center;   
+         }
+         .login-panel{
+             height: 588px;
+             width: 1130px;
+             position: absolute;
+             top:0;
+             left:50%;
+             margin-left: -565px;    
+         }
+         .login-form{
+             height: 545px;
+             width: 410px;
+             background-color: #ffffff;
+             position: absolute;
+             top:40px;
+             right: 10px;
+         }
+         .lf-header{
+             text-align: center;
+             padding: 27px 0;
+         }
+         .lf-header a{
+             font-size: 24px;
+             color: #666666;
+             text-align: center;
+             text-decoration: none;
+         }
+         .lf-header .active{
+             font-size: 24px;
+             color:  #f56600;
+             text-align: center;
+         }
+         .lf-header .line{
+            margin: 0 35px 0 42px;
+            border: 1px solid #e0e0e0;
+         }
+         .login-area{
+             width:348px;
+             margin: 0 auto;
+         }
+         .input-bar input{
+             width: 306px;
+             padding: 13px 16px 13px 14px;
+             font-size: 14px;
+             margin-bottom: 14px;
+             border:1px solid #efefef; 
+         }
+         button{
+             color: white;
+             background-color: #f56600;
+             font-size: 14px;
+             width: 348px;
+             height: 50px;
+             border: 0;    
+         }
+         a{
+             text-decoration: none;
+         }
+         .left{
+             float: left;     
+         }
+         .right{
+             float: right;
+         }
+         .text-info {
+             margin-top: 10px;
+         }
+         .left a{
+             color:#f56600;
+             font-size: 14px;
+         }
+         .right a{
+             color:#666;
+             font-size: 14px;
+         }
+         .text-info span{
+             color:#666;
+         }
+         .text-info::after{
+            content: "";
+            display:block;
+            clear:both;
+         }
+         .lf-footer{
+             width: 348px;
+             position: absolute;
+             bottom:10px;
+             left:50%;
+             margin-left: -174px;
+         }    
+          /* 本来.lf-footer{
+              width: 348px;
+              margin: 0 auto;
+          }   
+          本来说这么写的，让登陆末尾部分（其他登陆方式＋小图标）水平居中，宽度为348，后来得给他定位，但是margin auto
+          和position  冲突，但是又想定位又想居中怎么办，用到left 50%的方法； */
+         fieldset{
+             border-width: 1px 0 0 0;
+             text-align: center;  
+             color:#666; 
+             border-color: #666;
+         }
+         .logo-icon{
+            text-align: center;
+         }
+         .logo-icon a{
+             margin: 20px;
+             display: inline-block;
+             width: 30px;
+             height: 30px;
+             background-color: blue;
+             border-radius: 50%;
+         }
+         .logo-icon i{
+             display: block;
+             background: url("https://account.xiaomi.com/static/res/166d6dc/account-static/respassport/acc-2014/img/icons_type.png"); 
+         }
+         .logo-icon .qq{
+            background-color:#0288d1;
+         }
+         .logo-icon .qq i{
+            width: 18px;
+            height: 18px;
+            margin: 4px auto 0;
+            background-position: -19px,0;
+         }
+         .logo-icon .sina{
+            background-color: #d32f2f;
+         }
+         .logo-icon .sina i{
+            width: 18px;
+            height: 18px;
+            margin: 4px auto 0;
+            background-position: -38px,0;
+         }
+         .logo-icon .alipay{
+            background-color: #0ae;
+         } .logo-icon .alipay i{
+            background-position: -57px 0;
+            width: 25px;
+            height: 18px;
+            margin-top: 6px;
+            margin-left: 4px;
+         }
+         .logo-icon .wechat{
+             background-color: green;
+         }
+         .logo-icon .wechat i{
+            background-position: -83px 0;
+            width: 24px;
+            height: 18px;
+            margin: 4px auto 0;
+         }
+         .footer{
+            text-align: center;
+            color: #757575;
+            font-size: 14px;
+    }
+         .footer ul{
+            margin:20px 0;
+    }
+         .footer li{
+           display: inline-block;
+    }
+         .footer li a{
+           padding: 0 20px;
+           color: #757575
+    }
+        
+      
+
+      
+
+      
+           
+
+
+        
+        
+       
+        
+         
+         
+
+
+
+        
+
+
+
+        
+
+
+            
+         
+        
+    
+     
+     </style>
+ </head>
+ <body>
+     <div class="header"></div>
+     <div class="header-panel">
+         <div class="header-img"></div>
+    </div>
+
+     <div class="content">
+         <div class="content-bg"></div>
+         <div class="login-panel">
+             <div class="login-form">
+                 <div class="lf-header">
+                    <a class="active" href="javascript:void(0)">帐号登录</a>
+                    <span class="line"></span>
+                    <a href="javascript:void(0)">扫码登录</a>
+                 </div>
+                 <div class="lf-content">
+                     <div class="login-area">
+                         <div class="input-bar">
+                             <input type="text" placeholder="邮箱／手机密码／小米id">
+                             <input type="password" placeholder="密码">
+                         </div>
+                          <button>登录</button>
+                          <div class="text-info">
+                              <div class="left">
+                                  <a href="">手机短信登录／注册</a>
+                              </div>
+                              <div class="right">   
+                                        <a href="">立即注册</a>
+                                        <span>|</span> 
+                                        <a href="">忘记密码</a>       
+                              </div>
+                              </div>
+                          </div>
+                     </div>
+                     <div class="lf-footer">
+                         <fieldset>
+                             <legend> 其他登录方式</legend>
+                         </fieldset>
+                         <div class="logo-icon">
+                            <a class="qq" href="javascript:void(0);">
+                              <i></i>
+                            </a>
+                            <a class="sina" href="javascript:void(0);">
+                              <i></i>
+                            </a>
+                            <a class="alipay" href="javascript:void(0);">
+                              <i></i>
+                            </a>
+                            <a class="wechat" href="javascript:void(0);">
+                              <i></i>
+                            </a>
+                          </div>
+                         
+
+                     </div>
+
+
+                  
+                 </div>
+
+             </div>
+
+         </div>
+
+     </div>
+     <div class="footer">
+      <ul>
+          <li><a href="avascript:void(0)">简体</a>|</i>
+          <li><a href="avascript:void(0)">繁体</a>|</i>
+          <li><a href="avascript:void(0)">English</a>|</i>
+          <li><a href="avascript:void(0)">常见问题<a>|</i>
+          <li><a href="avascript:void(0)">隐私政策</a>|</i>
+      </ul>
+       <span>小米公司版权所有-京ICP备10046444-
+           <img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png" alt="">
+           京公网安备11010802020134号-京ICP证110507号</span>
+    </div>
+
+     
+ </body>
+ </html>

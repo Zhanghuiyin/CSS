@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            /* transition: height 1s ease */
+            /*  transition: height 1s ease 写在div里面就是移入移出均有动画 */
+        }
+        div:hover{
+            height: 200px;
+            transition: height 1s ease; 
+            /*  transition: height 1s ease 写在hover里就是移入有动画移出没有，因为这是仅在hover里面有动画 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>
+本节讲了过渡：transition
+transition的四个属性：
+transition-property:height;
+transition-duration:1s;
+transition-timing-function:ease;
+transition-delay:1s; 等1s过度
+
+书写格式：过渡动画：监听属性 时间 过渡效果匀速
+transition: height 1s ease; 
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1,.div2{
+            width: 200px;
+            height: 200px;
+        }
+        .div1{
+            background: red; 
+            opacity: 0;         /* 透明度，占据文档位置        */
+            display: none;          /*不占据文档位置  */
+            visibility: hidden;   /* 占据文档位置，但是绑定事件无效，有印象即可，js的部分 */
+        }
+        /* 以上是三种控制显示隐藏方式 */
+        .div2{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>
+<!-- 面试常问
+重绘：只改变元素外观 eg:颜色 透明
+重排：改变元素位置 大小 高宽 浮动 定位
+能使用重会就不用重排，因为费 浏览器性能 -->
+<!-- opacity transparent rgba三者共同点是都和透明有关。先分着来说一下：
+
+1、opacity用来设置元素的不透明级别，从 0.0 （完全透明）到 1.0（完全不透明）。
+例如： opacity: 0;    
+2、transparent是颜色的一种，这种颜色叫透明色。
+例如： border-color:transparent transparent blue transparent
+3、rgba(r,g,b,a)稍复杂一点，
+r：红色值；g：绿色值；b：蓝色值。三个颜色值组合在一起就形成最终颜色。
+a：alpha透明度。表示像素不透明性的值。像素越不透明，则隐藏越多呈现图像的背景。取值0~1之间。0表示完全透明的像素，1表示完全不透明的像素。
+
+
+现在，我们来看区别：
+
+1、opacity是作为一个完整属性出现的。transparent和rgba都是作为属性值出现的。
+
+2、opacity是对于整个元素起作用的。打个比方，就像拿一块玻璃糊在了这个元素上，盖上的地方都会受到影响。而transparent和alpha是对元素的某个属性起作用的。任何需要设置颜色的地方都可以根据情况使用transparent或rgba。比如背景、边框、字体等等。哪个属性的颜色设置了transparent，哪个属性就是透明的，完全透明。哪个属性用rgba()设置了透明，就对哪个属性起作用，透明程度可设置。
+
+3、由于opacity和alpha设置的透明程度可调，就引出一个继承的问题。如果一个元素未设置opacity属性，那么它会从它的父元素继承opacity属性的值。而alpha不存在继承。 -->

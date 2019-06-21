@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+   a{
+       height: 30px;
+       width: 30px;
+       display: inline-block;   
+        /* 变行块级元素，能成行排列还能设置高宽 */
+       background-color: blue;
+       border-radius: 50%;
+       /* 或者写15 px，30的一半也行 */
+       /* 圆角标签 50%就是圆形 */
+   }
+   i{
+       display: block;
+       margin-top: 6px;
+       margin-left: 4px;
+       width: 25px;
+       height: 18px;
+       background-image: url("https://account.xiaomi.com/static/res/166d6dc/account-static/respassport/acc-2014/img/icons_type.png");
+       background-position: -57px 0;
+   }
+   fieldset{
+       border-width: 1px 0 0 0;
+       /* 外框宽度（上右下左） */
+       text-align: center;
+       /* 文本居中 */
+   }
+</style>
+<body>
+    <fieldset>
+        <legend>其他登陆方式</legend>        
+    </fieldset>
+    <!-- fieldset标签和<legend>一起使用，文字外面有边框 -->
+
+    <a href="javascipt:void(0)；">  
+       <i></i>
+     </a>
+    
+     <!-- a标签代表图标外面圆形框，<i>标签代表圆形里面的图标 -->
+    
+</body>
+</html>
+
+<!-- 设置小图标有两种方法： 雪碧图和去图标网站找 -->
+
+
+

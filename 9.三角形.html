@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div2{
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color:transparent transparent blue transparent; /*上右下左*/
+              /* transparent 全透明的意思 */
+            margin-left: 50px;
+        }
+        .div1{
+          width: 100px;
+          height: 100px;
+          background: red;
+        }
+    </style>
+</head>
+
+<body>
+   <div class="div2"></div>
+   <div class="div1"></div>
+</body>
+</html>
+  <!-- 上面是实现三角形的第一种方法  css2里面的 ，四个无文本边框三个设置透明，只留下面那个-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+  
+    <style>
+        .parent{
+            position: relative;
+        }
+        .child1{
+            width: 10px;
+            height: 10px;
+            background: red;
+            transform: rotate(45deg); /*旋转45度*/
+            margin-left: 50px;
+        }
+        .child2{
+            width: 100px;
+            height: 100px;
+            background: blueviolet;
+            position: absolute;
+            top:5px;
+            
+        }
+    </style>
+</head>
+<body>
+     <div class="parent">
+         <div class="child1"></div>
+         <div class="child2"></div>
+     </div>
+</body>
+</html>
+<!-- 上面是实现三角形的第二种方法，css3里面的 一个正方形旋转45度，拿另外一个正方形通过定位区覆盖它-->

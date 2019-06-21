@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document
+    </title>
+    <style>
+        .parent{
+            width: 500px;
+            height: 500px;
+            border: 2px solid #000;
+            margin: 100px auto;
+            position:relative;
+        }
+        .child{
+            background: red;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            /* 不确定高宽的垂直水平居中 */
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="parent">
+            <div class="child">
+                hello
+            </div>
+    </div>
+
+    
+</body>
+</html>
+ <!-- 确定高宽都水平居中，可以用
+ position:abosulte;
+ top:50%;
+ left:50%;
+ margin-left:高宽的一半；
+ margin-top:高宽的一半；
+ margin:
+ 这个是根据父级的50%。
+ 
+ 不确定高宽的水平居中（上面的例子就是不确定高宽，里面的文本，靠文本撑开，所以用transform)
+ transform xyz这个是根据自己的50% -->
+
+
+<!-- 这个是块级在块级垂直水平居中 -->
+ 1.上面是块级在块垂直水平级居中
+ 2.块级元素水平居中：margin:0 auto
+ 3.文本在块级垂直居中  line-height:
+ 4.文本在块级水平居中:text-align:center;
+ 

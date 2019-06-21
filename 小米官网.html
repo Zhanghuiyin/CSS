@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1165124_querpw9gcao.css">
+
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;  
+        }
+        .clearfix::after{
+         content: "";
+         display: block;
+         clear: both;
+    }
+
+        /* *{
+            clear: both;
+        } */
+     
+         li {
+             list-style: none;
+         }
+          
+        a {
+           text-decoration: none;
+        }
+        .site-topbar{
+            height: 40px;
+            background-color: #333333;     
+        }
+        /* st-content start */
+        
+        .st-content{
+            height: 40px;
+            width: 1226px;
+            margin:0 auto;
+            position: relative;
+          
+        }
+        
+        .st-content li{
+            display: inline-block;   
+            height: 40px;
+        }
+        .st-content a{
+            line-height: 40px;   /*文本在块级元素居中*/
+            color: #757575;  
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;      
+        }
+        .st-content .left :hover{
+            color: aliceblue;
+        }
+             /* 实现a标签鼠标移入字体变颜色 */
+        .st-content .right ul :hover{
+            color: aliceblue;
+
+        }
+        .st-content .left{
+            float: left;
+        }
+        .st-content .right{
+            float: right;
+        }
+       
+        .st-content .left::after{ 
+        content: "";
+        display:block;
+        clear:both;
+        }
+        .st-content .right::after{
+        content: "";
+        display:block;
+        clear:both;
+
+        }
+        span{
+            color: #424242;
+             margin: 06px;
+        }
+        .st-content .right ul{
+            margin-right: 130px;
+        }
+        .st-content .shopping{
+         position: absolute;
+         right: -16px;
+         top:0px;
+         background: #424242;
+         width: 120px;
+         height: 40px;
+         text-align: center;
+         box-shadow: 0,0,10px rgba(0,0,0, 0.5);
+        
+        
+        }
+        .st-content .shopping a{
+            font-size: 12px;
+        }
+        .st-content .shopping i{
+            color: #b0b0b0;
+        }
+         .st-content .parent{
+            position: absolute;
+            top:19px;
+            left:550px;
+            display: none;
+            z-index: 100;
+        } 
+        .st-content .download:hover .parent{
+            display: block;
+            
+
+        }
+        .st-content .parent .sjx{
+            margin-left:20px;
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            background: white;
+            position: absolute; 
+            top:15px;
+            left:130px;
+            /* position: relative; */
+            z-index: 10;
+            /* z-index 层级关系，因为下面正方形的边框会在三角里面显示，所以用这个表示三角形在离z轴的距离；当前最高级，防止被覆盖 */
+         }
+         .st-content .parent .zfx{
+            width: 150px;
+            height: 150px;
+            background: white;
+            position: absolute; 
+            top:22px;
+            left:80px ;  
+            box-shadow: 0px 0px 3px #b0b0b0;    
+            text-align: center; 
+            /* box-shadow向框添加阴影 */
+           
+        }
+       .st-content .parent .zfx img{
+            width: 70px;
+            height: 70px;  
+            display: block;
+            margin: 20px auto;
+        }
+        /* img  是行块级，转换为块级才能使用margin:0 auto */
+        .st-content .shopping-logo{
+            width: 300px;
+            height: 10px;
+            background: #ffffff;
+            box-shadow: 0px 0px 3px #b0b0b0;   
+            position: absolute;
+            left:-179px;
+            transition: all 0.5s ease; 
+            /* line-height: 10px; */
+            visibility: hidden;
+            z-index: 100;
+    
+           
+        }
+
+        .st-content .shopping-logo span{
+            font-size: 12px;   
+        }
+
+        .st-content .shopping:hover .shopping-logo{
+            height: 100px;
+            visibility:visible;
+            transition: all 0.5s ease;
+        }
+        .st-content .shopping:hover{
+            background-color: #ffffff;
+          
+
+
+        }
+        .st-content .shopping:hover a{
+            color: orange;
+        }
+        .st-content .shopping:hover i{
+            color:orange;
+
+        }
+        .site-header .sh-content{
+            width: 1226px;
+            height: 100px;
+            margin:0 auto;
+            background-color: #fff;
+
+        }
+        .site-header .logo{
+            display: block;
+            height: 55px;
+            width: 55px;
+            background-color: orangered;
+            background-image: url("https://s01.mifile.cn/i/mi-logo.png");
+            float: left;
+            margin-top: 20px;
+
+        }
+        .site-header .nav{
+            line-height: 100px;
+            margin-left: 200px;
+        }
+        .site-header .nav li{
+           float: left;
+           display: block;
+           height: 52px;
+           margin: 10px;
+        }
+        .site-header .nav a{
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .site-header .search{
+            float:right;
+            margin-top: 30px;
+            position: relative;
+        }
+        .site-header .search input{
+            width: 245px;
+            height: 48px;
+            padding: 0,10px;       
+            border: 1px solid #e0e0e0;
+            outline: none;
+
+        }
+       .site-header .but{
+           float: right;
+           height: 48px;
+           width: 48px;
+           background-color: #fff;
+           border: 1px solid #e0e0e0;
+           text-align: center;
+           line-height: 48px;
+           color: #333;
+           /* 控制文本 （i标签是文本）水平垂直居中   text-align line-height */
+       }
+       .sh-content .search .search-info{
+           position: absolute;
+           top:15px;
+           left:100px;
+       }
+       .sh-content .search-info span{
+            padding: 0 5px;
+            font-size: 12px;
+            background: #eee;
+            color: #757575;
+       }
+       .slider-nav{
+           width: 100vw;
+           height: 0px;
+           box-shadow: 0 5px 10px rgba(0,0,0,.5);
+           position: absolute;
+           top:100px;
+           left: 0;
+           visibility: hidden;
+           transition: all 3s ease;
+           z-index: 100;
+     
+       }
+       .nav:hover .slider-nav{
+           height: 229px;
+           visibility: visible;
+       }
+  
+       .site-header{
+           position: relative;
+       }
+       .nav-info{ 
+          position: absolute;
+          top:100px;
+          left:0;
+          width: 100vw;    
+          margin: 0 auto; 
+          overflow: hidden;
+          height:0;
+          transition: all 3s ease;
+          z-index: 100;
+          background-color: #fff;
+          
+       }
+       .nav:hover .nav-info{
+           
+           height: 230px;
+       }
+       .nav-info li{
+           position: relative;
+           text-align: center;
+           width: 160px;
+           line-height: normal;
+           font-size: 16px;
+
+       }
+        .nav-info li img{
+         width: 160px;
+         height: 110px;
+         margin: 10px 0px;
+        }
+        .nav-info li span{
+         height: 18px;
+         padding: 1px 20px;
+         border: 1px solid #ff6700;
+         color: #FF6700;
+    }
+    .nav-info ul{
+        position: absolute;
+        left:70px;
+        top:0;
+    }
+    .nav .nav-info li:not(.first):before{
+      content: "";
+      display: block;
+      position: absolute;
+      left:0;
+      top:30px;
+      width: 1px;
+      height: 110px;
+      background-color: #ddd;
+    }
+    .container{
+        height: 460px;
+    }
+    .container-bg{
+        height: 460px;
+        width: 1226px;
+        /* background-color: #FF6700; */
+        margin: 0 auto;
+        position: relative;
+    }
+    .container .container-info{
+        width: 234px;
+        height: 420px;
+        background-color: rgba(0, 0,0, 0.6);
+        padding: 20px 0;
+        position: absolute;
+        left:0;
+        top:0;
+     }
+     
+    .container .container-info li {    
+        height: 42px;
+        width: 234px;
+        line-height: 42px;
+        /* padding: 0px 0px 0px 30px; */
+
+         
+    }
+    .container .container-info li:hover{
+        background-color: #FF6700;
+
+    }
+
+    .container .container-info a{
+        color:#fff;
+        font-size: 14px;
+        margin-left: 0px;
+        margin-left: 20px;      
+    }
+    .container .container-info i{
+        float: right;
+        margin-right: 20px;
+        color: rgba(255,255,255,0.5);
+        
+         
+    }
+    .container .container-bg img{
+        height: 460px;
+        width: 1226px;
+        display: block;
+      
+    }
+    .container-info .info-silder{
+        height: 460px;
+        width: 996px;
+        box-shadow: 0 0 3px rgba(0,0,0,.5);
+        position: absolute;
+        top: 0;
+        left:234px;
+        background-color: #ffffff;
+        display: none;
+       
+    }
+    .container-info li:hover .info-silder{
+        display: block;
+    }
+    .row{
+        height: 170px;
+        width: 1226px;
+        /* background-color: #757575; */
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+
+    }
+    .row .row-left{
+        width: 234px;
+        height: 170px;
+        background: #5f5750;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .row .row-left li{
+        height: 40px;
+        width: 70px;
+        padding: 0 3px;
+        float: left;
+        text-align: center;
+        line-height: 72px;
+        position: relative;
+    }
+    .row-left li::after,.row-left li::before{
+      content: "";
+      position: absolute;
+      display: block;
+      background-color:  #665e57;
+    }
+    .row-left li::after{
+      width: 1px;
+      height: 50px;
+      top:10px;
+      left:0px;
+     
+    }
+    .row-left li::before{
+      height: 1px;
+      width: 64px;
+      top:-1px;
+      left:6px;
+    
+    }
+    .row-left .top::before{
+      display: none;
+    }
+   
+    
+    .row .row-left i{
+        display: block;
+        height: 24px;
+        font-size: 24px;
+        color: rgba(255, 255,255, 0.7);
+    }
+    .row .row-left a{
+        display: block;
+        font-size: 12px;
+        color: rgba(255, 255,255, 0.7);
+    }
+    .row .row-left .ul2 li{
+        margin-top: 30px;
+    }
+    .row .row-container1 img{
+        height: 170px;
+        width: 316px;
+        display: block;
+        position: absolute;
+        left: 250px;
+        top:0;
+        
+    }
+    .row .row-container2 img{
+        height: 170px;
+        width: 316px;
+        display: block;
+        position: absolute;
+        top:0;
+        left:580px;
+    }
+    .row .row-right img{
+        height: 170px;
+        width: 316px;
+        display: block;
+        position: absolute;
+        top:0;
+        right: 0;
+
+    }
+    .right-logo{
+        position: fixed;
+        bottom:200px;
+        left:50%;
+        margin-left: 613px;
+        bottom:150px;
+    }
+    .right-logo li{
+        display: block;
+        height: 40px;
+        width: 27px;
+        background-color: #ffffff;
+        border: 1px solid  #f5f5f5;
+      }
+      .right-logo img{
+          display: block;
+          width: 20px;
+          height: 20px;
+          margin: 10px auto;
+          color: #757575;
+       
+       }
+
+    </style>
+</head>
+
+<body>
+    <div class="site-topbar">
+        <div class="st-content">
+            <div class="left">
+                <ul>
+                    <li><a href="">小米商城</a> <span>|</span></li>
+                  
+                    <li><a href="">mul</a><span>|</span></li>
+               
+                    <li><a href="">lot</a> <span>|</span></li>
+                
+                    <li><a href="">云服务</a> <span>|</span></li>
+                 
+                    <li><a href="">金融</a> <span>|</span></li>
+                  
+                    <li><a href="">有品</a> <span>|</span></li>
+                   
+                    <li><a href="">小爱开发平台</a> <span>|</span></li>
+                    
+                    <li><a href="">政企服务</a><span>|</span></li>
+                  
+                    <li><a href="">资质证照</a> <span>|</span></li>
+               
+                    <li><a href="">协议规则</a> <span>|</span></li>
+                
+                    <li class="download"><a href="">下载app</a> <span>|</span>
+                        
+                        <div class="parent">
+                            <div class="sjx"> </div>
+                            <div class="zfx">
+                                <img src="https://i1.mifile.cn/f/i/17/appdownload/download.png" alt=””>
+                                <span>小米商城</span>
+                            </div>
+
+                        </div>                     
+                    
+                    </li>
+              
+                    <li><a href="">select region</a> <span>|</span></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="">登录</a> <span>|</span></li>                  
+                    <li><a href="">注册</a> <span>|</span></li>     
+                    <li><a href="">消息通知</a></li>   
+                <ul>
+                <div  class="shopping">
+                    <i class="iconfont icon-gouwuche2"></i>
+                    <a href="">购物车（0）</a>
+                    <div class="shopping-logo">
+                        <span>购物车中还没有商品，赶快选购吧</span>
+
+                    </div>
+                </div>
+           </div>
+        </div>   
+     </div>    
+     
+     <div class="site-header">
+         <div class="sh-content clearfix">
+             <div class="logo">
+  
+             </div>
+             <div class="nav">
+                 <ul>
+                            <li><a href="javascript:void(0);">小米手机</a>
+                            <div class="nav-info">
+                            <ul>
+                            <li class="first">
+                                    <span>新品</span>
+                                    <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+                                    <p>小米9</p>
+                                    <p>2999元</p></li>
+                                    <li>
+                                            <span>新品</span>
+                                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+                                            <p>小米9</p>
+                                            <p>2999元</p>
+                                    </li>
+                                    <li>
+                                            <span>新品</span>
+                                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+                                            <p>小米9</p>
+                                            <p>2999元</p>
+                                    </li>
+                                    <li>
+                                            <span>新品</span>
+                                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+                                            <p>小米9</p>
+                                            <p>2999元</p>
+                                    </li>
+                                    <li>
+                                            <span>新品</span>
+                                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+                                            <p>小米9</p>
+                                            <p>2999元</p>
+                                    </li>
+                                    <li>
+                                            <span>新品</span>
+                                            <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+                                            <p>小米9</p>
+                                            <p>2999元</p>
+                                    </li>
+
+                            
+                            </ul>
+                            </div></li>
+                            <li><a href="javascript:void(0);">红米</a ></li>
+                            <li><a href="javascript:void(0);">电视</a ></li>
+                            <li><a href="javascript:void(0);">笔记本</a ></li>
+                            <li><a href="javascript:void(0);">家电</a ></li>
+                            <li><a href="javascript:void(0);">新品</a ></li>
+                            <li><a href="javascript:void(0);">路由器</a></li>
+                            <li><a href="javascript:void(0);">智能硬件</a></li>
+                            <li><a href="javascript:void(0);">服务</a ></li>
+                            <li><a href="javascript:void(0);">社区</a ></li>
+                 </ul>
+                 <div class="slider-nav"></div>
+
+             </div>
+
+             <div class="search">
+               <input type="text">
+               <div class="but">
+                   <i class="iconfont icon-search"></i>
+                
+               </div>
+               <div class="search-info">
+                   <span>小米9</span>
+                   <span>小米9se</span>
+               </div>
+
+             </div>
+         </div>
+     </div>
+
+        
+    
+    
+           <div class="container">
+               <div class="container-bg">
+                    <img src="http://i1.mifile.cn/a4/xmad_15564338641384_lOsBK.jpg" alt="">
+              
+                   <div class="container-info">        
+                    <ul>
+                           <li>
+                               <a href="">手机电话卡</a>
+                               <i class="iconfont icon-jiantouarrow487"></i>
+                                <div class="info-silder">
+
+                                </div>
+                            </li>
+                           <li><a href="">电视 盒子</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">笔记本 平板</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">家电 插线板</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">出行 穿戴</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">智能 路由器</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">电源 配件</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">健康 儿童</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">耳机 音响</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                           <li><a href="">生活 箱包</a><i class="iconfont icon-jiantouarrow487"></i></li>
+                       </ul>
+                    </div>   
+                    </div>
+
+               
+           </div>
+           <div class="row">
+               <div class="row-left">
+                   <ul class="ul1">
+                       <li class=" top">
+                           <a href=""><i class="iconfont icon-shouji"></i> 选购手机</a>
+                       </li>
+                       <li class="top">
+                                <a href=""><i class="iconfont icon-liwu-"></i>企业团购</a>
+                       </li>
+                       <li  class="top">
+                            <a href=""><i class="iconfont icon-F"></i>f码</a>
+                       </li>
+                       
+
+                   </ul>
+                   <ul class="ul2">
+                       <li>
+                           <a href=""><i class="iconfont icon-qiabao"></i>米粉卡</a>
+                       </li>
+                       <li>
+                            <a href=""><i class="iconfont icon-xunhuan"></i>以旧换新</a>
+                        </li>
+                        <li>
+                                <a href=""><i class="iconfont icon-qia"></i>话费充值</a>
+                      </li>
+                   </ul>
+
+               </div>
+               <div class="row-container1">
+                   <img src="http://i1.mifile.cn/a4/xmad_15566290288789_EQdZS.jpg" alt="">
+
+               </div>
+               <div class="row-container2">
+                   <img src="http://i1.mifile.cn/a4/xmad_15566163158698_gwoiA.jpg" alt="">
+
+               </div>
+               <div class="row-right">
+               <img src="http://i1.mifile.cn/a4/xmad_15410599445473_Ivjsb.jpg" alt="">
+
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="right-logo">
+        <ul>
+            <li class="li1">
+                <a href=""><img src="https://i8.mifile.cn/b2c-mimall-media/98a23aae70f25798192693f21c4d4039.png" alt=""></a>
+                
+            </li>
+            <li class="li2">
+                    <a href=""><img src="https://i8.mifile.cn/b2c-mimall-media/55cad219421bee03a801775e7309b920.png" alt=""></a>
+                    
+            <li>
+                    <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12eb0965ab33dc8e05870911b90f3f13.png" alt=""></a>
+            </li>
+            <li>
+                    <a href=""><img src="https://i8.mifile.cn/b2c-mimall-media/4f036ae4d45002b2a6fb6756cedebf02.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="https://i8.mifile.cn/b2c-mimall-media/d7db56d1d850113f016c95e289e36efa.png" alt=""></a>
+            </li>
+            
+        </ul>
+    </div>
+</body>
+</html>

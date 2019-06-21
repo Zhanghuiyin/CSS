@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        .parent{
+            position: relative;
+        }
+        .child1{
+            width: 10px;
+            height: 10px;
+            background: red;
+            transform: rotate(45deg);
+            margin-left: 50px;
+          
+        }
+        .child2{
+            width: 100px;
+            height: 100px;
+            background: blueviolet;
+            position: absolute;
+            top:5px;
+       }
+       .parent{
+           display: none;
+   /* display: 转换当前元素的样式，比如display:inline-block;这种行块级转换，现在表示隐藏 */
+      
+        }
+    .logo:hover.parent{
+        display: block;
+     }
+     /* hover 的意思是移入就会改变样式，logo:hover .parent的意思是，控制整个的字和图标下面的图标都在移入都时候改变，
+     移入的时候出现，所以是display:block; */
+     
+    </style>
+</head>
+<body>
+    <div class="logo"> 
+       <span>hello</span>
+       <div class="parent">
+         <div class="child1"></div>
+         <div class="child2"></div>
+     </div>
+   
+    </div>
+</body>
+</html>
