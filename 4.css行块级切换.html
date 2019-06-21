@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+ <style>
+     /* span{
+         display:block;
+     } */
+     /* 把行级变块级 */
+     /* div{
+         display:inline;
+     } */
+     /* 把块级变行级 */
+       div,span{
+           background-color: brown;
+           /* 背景颜色 */
+           border: 1px solid #000;
+           /* border-width: 1px;  边框
+          border-style: solid;    实线边框
+          border-color: #000;      边框颜色 
+           上面是这三行的简写 */
+       }
+       span{
+        width: 50px;
+        height: 50px;
+        display:block;
+        /* 行级元素靠内容抻开，要是不display 成块级元素，设置宽高也没用 */ 
+
+      /* margin-right: 100px; */
+      /* margin-bottom: 100px; */
+       /* 行级只能调左右边距 margin-left right ，但是现在已经转换完块级元素类就啥都能用了*/
+       }
+       div{
+           width:200px;
+           height: 200px;
+           margin-top: 100px;
+           /* 块级元素可以调上下左右边距 left right bottom top */
+       }
+</style>
+</head>
+ <body>
+     <span>1</span>
+     <span>2</span>
+     <span>3</span>
+     <div>a</div>
+     <div>b</div>
+     <div>c</div>
+     <img src="https://www.starbucks.com.cn/assets/images/homepage/tmall-card-01.png" alt="">
+     <img src="https://www.starbucks.com.cn/assets/images/homepage/tmall-card-02.png" alt="">
+    <!-- img   是行块级元素 ，（成行排列，但是还能设置宽高） -->
+ </body>
+ </html>
+
+ <!-- 小知识点：（面试常考）
+ 行级元素和块级元素在css里面的差别
+ 1，行级元素调外边距只可以margin-left ,margin-right;
+    块级元素调外边距可以 left ,right,bottom,top 都可以。
+ 2，行级元素不可以嵌套块级元素，但块级元素可以包含行内元素和块级元素
+  -->

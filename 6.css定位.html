@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+      width: 200px;
+      height: 300px;
+      background-color: red;
+      position: relative;
+      /* 是child 的祖先元素，所以在这定个位 */
+    }
+    .child{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+       /* position   声明定位
+       absolute   绝对定位，相对于最近已定位的祖先元素 */
+      position: absolute; 
+      right: 0;
+      bottom: 0;
+      /* relative相对定位 */
+      /* 相对于本该出现的位置进行定位 */
+      /* position: relative;
+         left: 10px;
+         top:10px; */
+    }
+    。go-top{
+        /* fixed */
+      /* 固定定位 相对浏览器进行定位 */
+        position: fixed;
+        right: 20px;
+        bottom:20px;
+         /* 怎么挪动进度条， top都不动 */
+    }
+</style>
+<body>
+        <div class="parent">
+                <div class="child"></div>
+              </div>
+
+              <div class="go-top">top</div>
+
+
+</body>
+</html>
+
+本节讲了三种定位：
+position:relative;
+position:absolute; （相对于最近已定位的祖先元素定位）
+position:fixed;
+
+  
